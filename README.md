@@ -1,5 +1,7 @@
 # Funções
 
+<br>
+
 ## Método para imprimir a subárvore esquerda
 
 ```cpp
