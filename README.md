@@ -30,3 +30,42 @@ void printRightSubtree() {
 ```
 
 <br>
+
+## Método para imprimir apenas os ímpares
+
+```cpp
+void printOdds(Node *aux) {
+    if (aux == NULL) return; // Caso base: nó nulo
+    printOdds(aux->left);    // Percorre a subárvore esquerda
+    if (aux->value % 2 != 0) // Verifica se é ímpar
+        printf("%d ", aux->value);
+    printOdds(aux->right);   // Percorre a subárvore direita
+}
+
+void printOdds() {
+    printf("Números ímpares: ");
+    printOdds(root);
+    printf("\n");
+}
+```
+
+<br>
+
+## Método para imprimir apenas os pares
+
+```cpp
+void printEvens(Node *aux) {
+    if (aux == NULL) return; // Caso base: nó nulo
+    printEvens(aux->left);   // Percorre a subárvore esquerda
+    if (aux->value % 2 == 0) // Verifica se é par
+        printf("%d ", aux->value);
+    printEvens(aux->right);  // Percorre a subárvore direita
+}
+
+void printEvens() {
+    printf("Números pares: ");
+    printEvens(root);
+    printf("\n");
+}
+
+```
