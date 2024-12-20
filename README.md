@@ -10,7 +10,7 @@ void printLeftSubtree() {
         printf("Subárvore esquerda está vazia\n");
         return;
     }
-    inOrder(root->left); // Reutiliza a lógica do inOrder para percorrer a subárvore esquerda
+    inOrder(root->left); 
     printf("\n");
 }
 ```
@@ -24,7 +24,7 @@ void printRightSubtree() {
         printf("Subárvore direita está vazia\n");
         return;
     }
-    inOrder(root->right); // Reutiliza a lógica do inOrder para percorrer a subárvore direita
+    inOrder(root->right); 
     printf("\n");
 }
 ```
@@ -35,11 +35,11 @@ void printRightSubtree() {
 
 ```cpp
 void printOdds(Node *aux) {
-    if (aux == NULL) return; // Caso base: nó nulo
-    printOdds(aux->left);    // Percorre a subárvore esquerda
-    if (aux->value % 2 != 0) // Verifica se é ímpar
+    if (aux == NULL) return; 
+    printOdds(aux->left);    
+    if (aux->value % 2 != 0) 
         printf("%d ", aux->value);
-    printOdds(aux->right);   // Percorre a subárvore direita
+    printOdds(aux->right);  
 }
 
 void printOdds() {
@@ -55,11 +55,11 @@ void printOdds() {
 
 ```cpp
 void printEvens(Node *aux) {
-    if (aux == NULL) return; // Caso base: nó nulo
-    printEvens(aux->left);   // Percorre a subárvore esquerda
-    if (aux->value % 2 == 0) // Verifica se é par
+    if (aux == NULL) return; 
+    printEvens(aux->left);   
+    if (aux->value % 2 == 0) 
         printf("%d ", aux->value);
-    printEvens(aux->right);  // Percorre a subárvore direita
+    printEvens(aux->right);  
 }
 
 void printEvens() {
